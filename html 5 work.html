@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced HTML5 Elements and Forms</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+    }
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Ordered List Styles */
+    ol {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+    ol li {
+      margin-bottom: 10px;
+    }
+
+    /* Image Styles */
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Form Styles */
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      section {
+        padding: 15px;
+        margin: 15px;
+      }
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Advanced HTML5 Elements and Forms</h1>
+  </header>
+
+  <!-- Ordered list with Roman numerals -->
+  <section>
+    <h2>Favorite Programming Languages</h2>
+    <ol type="I">
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>C#</li>
+      <li>Go</li>
+    </ol>
+  </section>
+
+  <!-- External image from Pexels -->
+  <section>
+    <h2>Beautiful Scenery</h2>
+    <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Mountain Scenery" width="600"/>
+  </section>
+
+  <!-- Table of 5 contacts -->
+  <section>
+    <h2>Contact List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Mobile</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jane Doe</td>
+          <td>123 Market Street</td>
+          <td>+1234567890</td>
+          <td>jane@example.com</td>
+        </tr>
+        <tr>
+          <td>John Smith</td>
+          <td>45 Koikj Avenue</td>
+          <td>+254725678901</td>
+          <td>johnsmith3@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Mary Johnson</td>
+          <td>789 Oak Lane</td>
+          <td>+3456789012</td>
+          <td>maryjohnson@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Tom Magz</td>
+          <td>Mashakura Road</td>
+          <td>+254767890123</td>
+          <td>tomjok3@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Alica Kendi</td>
+          <td>101 Maple Lumumba</td>
+          <td>+254718901234</td>
+          <td>alice223@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Registration form -->
+  <section>
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+      <!-- Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required/>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required/>
+
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter a password" required minlength="6"/>
+
+      <!-- Date -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required/>
+
+      <!-- Dropdown -->
+      <label for="country">Select Country:</label>
+      <select id="country" name="country" required>
+        <option value="">--Select--</option>
+        <option value="kenya">Kenya</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="india">India</option>
+      </select>
+
+      <!-- Radio buttons -->
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required/>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required/>
+      <label for="female">Female</label>
+
+      <!-- Checkboxes -->
+      <label>Hobbies:</label>
+      <input type="checkbox" id="reading" name="hobbies" value="Reading"/>
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="music" name="hobbies" value="Music"/>
+      <label for="music">Music</label>
+      <input type="checkbox" id="traveling" name="hobbies" value="Traveling"/>
+      <label for="traveling">Traveling</label>
+
+      <!-- Submit button -->
+      <input type="submit" value="Register"/>
+    </form>
+  </section>
+
+</body>
+</html>
